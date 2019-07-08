@@ -1,0 +1,124 @@
+%导言区
+%\documentclass[twocolumn]{article} %双栏
+\documentclass{article} %单栏
+%引用的包
+%---------------------
+\usepackage{ctex}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{enumerate}
+%---------------------
+%页面格式放在这里
+%---------------------
+\geometry{left=68pt,right=68pt,top=58pt,bottom=58pt} %页边距
+%---------------------
+%自定义样式放在这里
+%---------------------
+\newcommand{\abstractzh}[2]{
+	\noindent
+	\textbf{摘要：}
+	#1\\ %摘要正文
+	\textbf{关键词：}#2\\\\ %关键词
+}
+\newcommand{\abstracten}[2]{
+	\noindent
+	\textbf{Abstract：}
+	#1\\ %摘要正文
+	\textbf{Key words：}#2 %关键词
+}
+\newcounter{figcounter}
+\newcommand{\fig}[2]{
+	~\\
+	\centerline{\includegraphics[width=0.80\textwidth]{#1}}
+	\addtocounter{figcounter}{1}
+	\centerline{图\arabic{figcounter} \  #2}
+}%图
+\newcounter{tblcounter}
+\newcommand{\tbl}[2]{
+	\addtocounter{tblcounter}{1}
+	\centerline{表\arabic{tblcounter} \  #2}
+	~\\
+	\centerline{#1}
+}%表
+\newcommand{\titleen}[2]{
+	\centerline{\Large{#1}}\\
+	\centerline{#2}\\
+}%英文标题
+%---------------------
+%自定义公式放在这里
+%---------------------
+\newcommand{\PKID}[2]{PK_{#1}\|ID_{#2}} %[参数个数]{#1参数1...}
+%---------------------
+%标题
+%---------------------
+\title{标题}
+\author{\kaishu{作者1，作者2}}
+\date{}%不显示时间
+%---------------------
+%正文区（文稿区）
+\begin{document} %仅有一个
+%---------------------
+%这里生成标题、作者
+%---------------------
+\maketitle
+%---------------------
+%摘要-中文
+%---------------------
+\abstractzh{
+	这里是中文摘要
+}{关键词1，关键词2}
+%---------------------
+%标题-英文
+%---------------------
+\titleen{Title}{author1,author2}
+%---------------------
+%摘要-英文
+%---------------------
+\abstracten{
+	Here is English abstract
+}{key word1, key word2}
+%---------------------
+%文章开始
+%---------------------
+\section{一级标题}
+
+这里是正文:占位符占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符
+这里是引用\cite{M. Iansiti}。
+
+\fig{test_fig.png}{测试图例}
+
+\subsection{二级标题}
+
+这里是正文:占位符占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符
+
+\tbl{
+\begin{tabular}{c|c}% 通过添加 | 来表示是否需要绘制竖线
+	\hline  % 在表格最上方绘制横线
+	1&2\\
+	\hline  %在第一行和第二行之间绘制横线
+	3&4\\
+	\hline % 在表格最下方绘制横线
+\end{tabular}
+}{这里是表标题}
+
+\subsubsection{三级标题}
+
+这里是正文:占位符占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符
+
+\subparagraph{子标题:}{占位符占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符
+占位符占位符占位符占位符占位符占位符占位符占位符占位符}
+
+\begin{thebibliography}{24}
+\bibitem{M. Iansiti} M. Iansiti and K. R. Lakhani, "The truth about blockchain," Harvard Bus. Rev., vol. 95, no. 1, pp. 118–127, 2017.
+	
+\end{thebibliography}
+	
+\end{document}
+	
