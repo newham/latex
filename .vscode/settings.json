@@ -1,10 +1,3 @@
-# latex
-Latex template for Chinese - Latex中文模板  
-
-*请使用XeLatex作为编译器  
-
-vscode的配置：
-```json
 {
   "latex-workshop.latex.recipes": [
     {
@@ -47,6 +40,5 @@ vscode的配置：
       ]
     }
   ],
-  "editor.wordWrap": "on"
+  "latex-preview.command": "xelatex"
 }
-```
