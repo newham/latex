@@ -50,3 +50,8 @@ vscode的配置：
   "editor.wordWrap": "on"
 }
 ```
+
+**截图**
+
+<img src="template/template_00.png" style="border:1px solid black">
+<img src="template/template_01.png" style="border:1px solid black">
