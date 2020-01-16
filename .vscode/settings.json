@@ -40,5 +40,6 @@
       ]
     }
   ],
-  "latex-preview.command": "xelatex"
+  "latex-preview.command": "xelatex",
+  "editor.wordWrap": "on"
 }
